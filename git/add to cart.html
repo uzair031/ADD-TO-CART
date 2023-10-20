@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+    <style>
+      header{background-color: teal;
+             width: 100%;
+             height: 120px;
+
+
+      }
+        .main{background-color: aqua;
+              height: 600px;
+              width: 200px;
+              position: absolute;
+              top: 120px;
+              right: 83%;
+              padding-left: 40px;
+              transform:translateX(-250px)
+   
+        }
+        .main li{list-style: none;
+                 padding: 20px;
+
+        }
+
+      .main a{font-size: 20px;
+             text-decoration:none ;
+                font-style: oblique;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+   
+      .btn{background-color: black;
+           height: 40px;
+           width: 40px;
+           border-radius: 10px;
+           padding: 5px;
+           position: absolute;
+           top: 50px;
+           cursor: pointer;
+         
+         
+           }
+
+
+      .top{background-color: aliceblue;
+           height: 2px;
+            width: 30px;
+            border: solid;
+            margin:3px ;
+         
+            
+
+      }
+        
+      .active{transform:translateX(0px) ;
+                transition: 250ms;
+      }
+      .active1{ transition: 250ms;
+
+      }
+       .agay{transform: translateX(250px);
+           transition: 250ms;
+       }
+              
+      .agay2{transform: translateX(280px);
+        transition: 250ms;
+      }
+      .agay3{transform: translateX(350px);
+        transition: 250ms;
+      }
+
+      
+      
+
+      
+
+      
+    .close{background-color: brown;
+          width: 60px;
+          height: 30px;
+         padding: 15px;
+         margin-top: 15px;
+          
+
+    }
+    .ser{background-color: brown;
+         border-radius: 40px;
+         height: 50px;
+         width: 50px;
+         position: absolute;
+         top: 50px;
+         left: 90px;
+         padding: 8px;
+         font-weight: bolder;
+
+    }
+    .search{border-radius: 20px;
+            height: 40px;
+            width: 200px;
+            position: absolute;
+            top: 130px;
+            transform: translateX(-220px);
+    }
+    .now{ transform: translateX(300px);
+      transition: 250ms;
+
+    }
+ 
+     .SHOP{position: absolute;
+           right: 60px;
+            top: 60px;
+            background-color: brown;
+            
+
+     }
+    
+     .bar{background-color: cadetblue;
+         height: 100%;
+        width: 200px;
+        position: absolute;
+        right: 10px;
+        font-size: 30px;
+        transform: translateX(220px);
+
+     }
+
+  .chez{background-color: black;
+        height: 200px;
+        width: 200px;
+  }
+  .add{transform: translateX(0);
+        transition: 250ms;
+  }
+  .off{background-color: brown;
+      width: 95px;
+      height: 60px;
+      position: absolute;
+      bottom: 0px;
+      font-size: 30px;
+      padding: 10px;
+      
+
+  }
+  .allcard{display: flex;
+       
+  }
+  .card{border: 2px black solid;
+        width: 200px;
+        height: 300px;
+        padding: 20px;
+        margin: 20px;
+     position: relative;
+     top: 40px;
+     transition-property: all; 
+            transition-duration: 2s,2s,2s;
+
+ 
+  }
+  .card img{width: 150px;
+            
+  }
+  .card li{font-size: 40px;
+           list-style: none;
+
+  }
+  .card:hover{
+       width: 250px;
+       height: 350px;
+       background-color: red;
+            
+  }
+    </style>
+</head>
+
+<body>
+  <header>
+  <button class="SHOP" onclick="list()">SHOP</button>
+  <input type="text" class="search" id="ing">
+<div class="btn"onclick="fun()">
+  <div class="top"></div>
+  <div class="top"></div>
+  <div class="top"></div>
+</div>
+<button class="ser"  onclick="ing()">search</button>
+</header>      
+        <div class="main" id="mah">
+ <h1>MEANU</h1>
+<u>
+    <li><a href="">HOME</a></li>
+    <li><a href="">FORM</a></li>
+    <li><a href="">ABOUT US</a></li>
+    <li><a href="">SUGESTION</a></li>
+    <li><a href="">BLOGS</a></li>
+    <li><a href="">CONTACT US</a></li>
+    <li><a href="">DITAIL</a></li>
+</u>
+     <div class="close" onclick="btn()">CLOSE</div>
+
+  </div>
+
+  <div class="bar" id="list">
+    ITEMS NO:<b id="no"></b><button onclick="dl()">DELELTE ALL</button>
+    <ol id="cart"></ol>
+    <div class="off" onclick="off()">CLOSE</div>
+  </div>
+
+
+  <div class="allcard">
+ <div class="card" id="saman">
+<img src="C:\Users\wpc\Desktop\iamge\download.jpg">
+<ol>
+ <li><b class="name">NAME</b></li>
+ <li><b class="rs">$200</b></li>
+ <li><button class="tnb" onclick="abc('cards')">ADD TO CAR</button></li>
+</ol>
+ </div>
+ <div class="card" id="saman2">
+  <img src="C:\Users\wpc\Desktop\iamge\download.jpg">
+  <ol>
+   <li><b class="name">NAME 2</b></li>
+   <li><b class="rs">$300</b></li>
+   <li><button class="tnb" onclick="abc('name')">ADD TO CAR</button></li>
+  </ol>
+   </div>
+   <div class="card" id="saman3">
+    <img src="C:\Users\wpc\Desktop\iamge\download.jpg">
+    <ol>
+     <li><b class="name">NAME 3</b></li>
+     <li><b class="rs">$400</b></li>
+     <li><button class="tnb" onclick="abc('name')">ADD TO CAR</button></li>
+    </ol>
+     </div>
+   </div>
+  <script>
+    function fun(){
+document.getElementById("mah").classList.add("active");
+document.getElementById("saman").classList.add("agay");
+document.getElementById("saman2").classList.add("agay2");
+document.getElementById("saman3").classList.add("agay3");
+
+    }
+ 
+
+    
+    function btn(){
+      document.getElementById("mah").classList.remove("active");
+      document.getElementById("mah").classList.add("active1");
+      document.getElementById("saman").classList.remove("agay");
+      document.getElementById("saman2").classList.remove("agay2");
+      document.getElementById("saman3").classList.remove("agay3");
+    }
+    function ing(){
+  document.getElementById("ing").classList.toggle("now");
+    }
+    function list(){
+document.getElementById("list").classList.add("add");
+    }
+    function off(){
+      document.getElementById("list").classList.remove("add");
+    }
+   
+   var ol = document.getElementById("cart")
+  function abc(e){
+    var cards = document.getElementsByClassName("card").innerHTML = e;
+  var li = document.createElement("li")
+  var txt = document.createTextNode(cards)
+  li.appendChild(txt)
+  ol.appendChild(li)
+
+  }
+  function dl(){
+      ol.innerHTML=""
+  }
+  </script>
+</body>
+</html>
